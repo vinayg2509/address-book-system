@@ -19,15 +19,10 @@ public class Contact
 		this.setCity(city); 
 		this.setState(state); 
 		this.setZip(zip);
-		this.setAddress(address);
+		this.setPhoneNumber(phoneNumber);
 		this.setEmail(email);
 
 	}
-
-
-
-
-
 
 	public String getFirstName() {
 		return firstName;
@@ -93,18 +88,16 @@ public class Contact
 		this.email = email;
 	}
 
-	@Override
-	public String toString() {
-		return "Contact{" +
-				"First Name='" + firstName + '\'' +
-				", Last Name='" + lastName + '\'' +
-				", Address='" + address + '\'' +
-				", City='" + city + '\'' +
-				", State='" + state + '\'' +
-				", Zip='" + zip + '\'' +
-				", Phone Number='" + phoneNumber + '\'' +
-				", Email='" + email + '\'' +
-				'}';
-	}
+	   // Method to display contact details
+    public void displayContact() {
+        System.out.println("First Name: " + firstName);
+        System.out.println("Last Name: " + lastName);
+        System.out.println("Address: " + address);
+        System.out.println("City: " + city);
+        System.out.println("State: " + state);
+        System.out.println("ZIP: " + zip);
+        System.out.println("Phone Number: " + phoneNumber);
+        System.out.println("Email: " + email);
+    }
 }
 
