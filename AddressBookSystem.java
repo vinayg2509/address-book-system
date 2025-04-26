@@ -36,12 +36,20 @@ class AddressBookSystem {
 		// Create ContactPerson object
 		Contact newContact = new Contact(firstName, lastName, address, city, state, zip, phoneNumber, email);
 
+
 		// Add to AddressBook
 		addressBook.addContact(newContact);
 		System.out.println();
 		// printing that contacts has been successfully added
 		System.out.println("\nContact added successfully! Here's your Address Book:");
 		addressBook.displayContacts();
+
+		// Ask if user wants to edit any contact
+		System.out.print("\nEnter the first or last name of the contact you want to edit: ");
+		String nameToEdit = scanner.nextLine();
+
+		// Edit contact based on name
+		addressBook.editContact(nameToEdit);
 
 		scanner.close();
 	}
