@@ -51,6 +51,18 @@ class AddressBookSystem {
 		// Edit contact based on name
 		addressBook.editContact(nameToEdit);
 
+		// Delete a contact based on a name
+		System.out.println("Do you want to delete the contact? Y/N");
+		String deleteChoice = scanner.nextLine();
+
+		if (deleteChoice.equalsIgnoreCase("y")) {
+			System.out.println("Enter the first or last name of the contact that you want to delete");
+			String nameToDelete = scanner.nextLine();
+			addressBook.deleteContact(nameToDelete);
+
+			System.out.println("\n Updated Address Book: ");
+			addressBook.displayContacts();
+		}
 		scanner.close();
 	}
 
